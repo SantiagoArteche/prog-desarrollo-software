@@ -35,7 +35,6 @@
     function volverHtml($mensaje, $error = false){
         $error;
         echo $mensaje;
-        header('Refresh: 3; Ejercicio18.html');
     }
    
     foreach ($arrayLetras as $letra) {

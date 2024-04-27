@@ -35,6 +35,7 @@
   </body>
 </html>
 <?php
+if($_POST){
    $number1 = intval($_POST["number"]);
    $number2 = intval($_POST["number2"]);
 
@@ -48,4 +49,5 @@
    echo "<pre>";
    echo "<h1>El producto de los numeros es: $producto</h1>";
    echo "</pre>";
+}
 ?>

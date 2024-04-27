@@ -34,13 +34,9 @@
 
 <?php
 
-function volverPag($msg){
-    echo $msg;
-    header('Refresh: 4; Ejercicio48.html');
-};
-
-if(strlen($_POST['hora']) !== 5 || !strpos($_POST['hora'], ':')){
-    volverPag('<h1>El formato en el que se debe ingresar la hora es [hora:minutos] ej: 13:00</h1>'); 
+if($_POST){
+  if(strlen($_POST['hora']) !== 5 || !strpos($_POST['hora'], ':')){
+    echo '<h1>El formato en el que se debe ingresar la hora es [hora:minutos] ej: 13:00</h1>';
     return;
 }
 
@@ -50,20 +46,20 @@ $minutos = $separarString[1];
 $numerosValidos = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 if($hora > 23){
-    volverPag('<h1>Ingresa una hora valida entre 00 y 23!</h1>');
-    return;
+  echo '<h1>Ingresa una hora valida entre 00 y 23!</h1>';
+  return;
 }
 
 if($minutos > 59){
-    volverPag('<h1>Ingresa un minuto valido entre 00 y 59!</h1>');
-    return;
+  echo '<h1>Ingresa un minuto valido entre 00 y 59!</h1>';
+  return;
 }
 
 for($i = 0; $i < 2; $i++){
-    if(!in_array($hora[$i], $numerosValidos) || !in_array($minutos[$i], $numerosValidos) ){
-        volverPag('<h1>Recuerda que solo puedes ingresar numeros enteros positivos!</h1>');
-        return;
-    }
+  if(!in_array($hora[$i], $numerosValidos) || !in_array($minutos[$i], $numerosValidos) ){
+      echo '<h1>Recuerda que solo puedes ingresar numeros enteros positivos!</h1>';
+      return;
+  }
 }
 
 $dia = $_POST['dia'];
@@ -92,5 +88,12 @@ if($dia == 5 && $hora == 15 && $minutos == 0){
 }else{
     echo "<h1>TAN SOLO FALTAN: $minutosDif MINUTOS PARA EL FIN DE SEMANA!</h1>";
 }
+}
+
+
+
+
+
+
 
 ?>

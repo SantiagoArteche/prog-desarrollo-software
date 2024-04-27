@@ -33,14 +33,18 @@
 </html>
 
 <?php
-$w = $_POST['wResult'];
-$formula = ( 1 / ( sqrt(2) * pi() ) ) * exp( pow(-$w, 2) / 2 );
 
-if($formula === INF){
-    echo "<h1 style='font-size: 44px;'>El valor de z es: <span style='font-size: 60px;'>∞</span> (Infinito)</h1>";
-}else{
-    echo "<h1 style='font-size: 44px;'>El valor de z es: $formula</h1>";
+if($_POST){
+  $w = $_POST['wResult'];
+  $formula = ( 1 / ( sqrt(2) * pi() ) ) * exp( pow(-$w, 2) / 2 );
+  
+  if($formula === INF){
+      echo "<h1 style='font-size: 44px;'>El valor de z es: <span style='font-size: 60px;'>∞</span> (Infinito)</h1>";
+  }else{
+      echo "<h1 style='font-size: 44px;'>El valor de z es: $formula</h1>";
+  }
 }
+
 ?>
 
 
