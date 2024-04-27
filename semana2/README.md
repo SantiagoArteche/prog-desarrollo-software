@@ -7,10 +7,11 @@ php para que las muestre ordenadas alfabéticamente.
 
 Elabore un programa que lea el valor de W e imprima el valor de Z.
 
-      1     - w2/ 2
-
-Z = ----- e
-√ 2 π
+    ```
+          1     - w2/ 2
+    Z = ----- e
+        √ 2 π
+    ```
 
 # Ejercicio 38
 
