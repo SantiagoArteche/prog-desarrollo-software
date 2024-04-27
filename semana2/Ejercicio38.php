@@ -29,7 +29,7 @@ $grados = $_POST['grados'];
 $opuesto = $tipo === 'farenheit' ? 'CENTIGRADOS' : 'FARENHEIT';
 $mayusTipo = strtoupper($tipo);
 
-if($grados){
+if($_POST){
 if(is_numeric($grados)){
     $respuesta = "La conversion de $grados grados $mayusTipo a grados $opuesto  es de: ";
 
