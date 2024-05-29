@@ -45,6 +45,7 @@ $hora = $separarString[0];
 $minutos = $separarString[1];
 $numerosValidos = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+
 if($hora > 23){
   echo '<h1>Ingresa una hora valida entre 00 y 23!</h1>';
   return;
@@ -89,11 +90,4 @@ if($dia == 5 && $hora == 15 && $minutos == 0){
     echo "<h1>TAN SOLO FALTAN: $minutosDif MINUTOS PARA EL FIN DE SEMANA!</h1>";
 }
 }
-
-
-
-
-
-
-
 ?>
