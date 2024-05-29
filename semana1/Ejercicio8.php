@@ -15,7 +15,6 @@
         <input
           type="number"
           name="number"
-          value="number"
           style="padding: 5px; font-size: 20px; width: 100px"
         />
       </div>
@@ -24,7 +23,6 @@
         <input
           type="number"
           name="number2"
-          value="numbe2"
           style="padding: 5px; font-size: 20px; width: 100px"
         />
       </div>
