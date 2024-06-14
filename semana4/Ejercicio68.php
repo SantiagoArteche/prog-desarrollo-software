@@ -34,30 +34,32 @@ $vocalesExpReg = '/[aeiouáéíóúü]/';
 $caracteresEspecialesExpReg = '/[^\w\s]/';
 $n = 0;
 
+
 if($_POST){
-    if(strlen($silaba) != 2 || is_numeric($silaba)){
-        echo "<h1>Una silaba esta compuesta de dos letras, ingrese nuevamente!</h1>";
-        return;
-    }
-    
-    if(preg_match($caracteresEspecialesExpReg, $silaba)){
-        echo "<h1>Una silaba no contiene caracteres especiales!</h1>";
-        return;
-    }
-    
-    if(!preg_match($vocalesExpReg, strtolower($silaba))){
-        echo "<h1>Una silaba contiene al menos una vocal!</h1>";
-        return;
-    }
-    
-    for($i = 0; $i < strlen($caracteres); $i++){
-        $silabaEnCaracteres = $caracteres[$i] . $caracteres[$i + 1];
-    
-        if($silabaEnCaracteres == $silaba){
-            $n++;
-        }
-    }
-    
-    echo "<h1>La silaba $silaba se repite $n veces en la tira de caracteres: $caracteres";
+
+  if(strlen($silaba) != 2 || is_numeric($silaba)){
+      echo "<h1>Una silaba esta compuesta de dos letras, ingrese nuevamente!</h1>";
+      return;
+  }
+  
+  if(preg_match($caracteresEspecialesExpReg, $silaba)){
+      echo "<h1>Una silaba no contiene caracteres especiales!</h1>";
+      return;
+  }
+  
+  if(!preg_match($vocalesExpReg, strtolower($silaba))){
+      echo "<h1>Una silaba contiene al menos una vocal!</h1>";
+      return;
+  }
+  
+  for($i = 0; $i < strlen($caracteres); $i++){
+      $silabaEnCaracteres = $caracteres[$i] . $caracteres[$i + 1];
+  
+      if($silabaEnCaracteres == $silaba){
+          $n++;
+      }
+  }
+
+  echo "<h1>La silaba $silaba se repite $n veces en la tira de caracteres: $caracteres </h1>";
 }
 ?>
