@@ -1,24 +1,9 @@
 <?php
-
 $palabraA = $_POST['wordA'];
 $palabraB = $_POST['wordB'];
 
-for($i = 0; $i < strlen($palabraA) || $i < strlen($palabraB); $i++){
-    if(is_numeric($palabraA[$i]) || is_numeric($palabraB[$i])){
-        echo "<h1>No se deben ingresar numeros</h1>";
-        return;
-    }
-
-    if($palabraA[$i] == ' '|| $palabraB[$i] == ' '){
-        echo "<h1>No se deben ingresar espacios</h1>";
-        return;
-    }
-}
-
-if(evaluarLetras($palabraA, $palabraB)){
-    echo "<h1>Entre la primer y segunda palabra hay " . evaluarLetras($palabraA, $palabraB) . " letra/s iguale/s </h1>";
-}
-
+evaluarLetras($palabraA, $palabraB);
+    
 function evaluarLetras($palabra, $bPalabra){
     $arrayLetras = crearArray($palabra);
     $arrayLetrasB = crearArray($bPalabra);
@@ -29,11 +14,6 @@ function evaluarLetras($palabra, $bPalabra){
     $verificarA = verificarLetras($a, $palabra, $arrayLetras);
     $verificarB = verificarLetras($b, $bPalabra, $arrayLetrasB);
 
-    if($verificarA || $verificarB){
-        echo "<h1>No se deben repetir letras dentro de una misma palabra</h1>";
-        return;
-    }
-
     foreach($arrayLetras as $letra){
         foreach($arrayLetrasB as $letraB){
             if($letra == $letraB){
@@ -42,7 +22,22 @@ function evaluarLetras($palabra, $bPalabra){
         }
     }
 
-    return $n;
+    if($verificarA == 'errorA' || $verificarB == 'errorA'){
+        echo "<h1>No se deben ingresar numeros</h1>";
+        return;
+    }else if($verificarA == 'errorB' || $verificarB == 'errorB'){
+        echo "<h1>No se deben ingresar espacios</h1>";
+        return;
+    }else if($verificarA == 'errorC' || $verificarB == 'errorC'){
+        echo "<h1>No se deben repetir letras dentro de una misma palabra</h1>";
+        return;
+    }else{
+        if($n == 1){
+            echo "<h1>Entre la primer y segunda palabra hay " . $n . " letra igual </h1>";
+        }else{
+            echo "<h1>Entre la primer y segunda palabra hay " . $n . " letras iguales </h1>";
+        }
+    }
 }
 
 function crearArray($palabra){
@@ -56,8 +51,16 @@ function crearArray($palabra){
 }
 
 function verificarLetras($sumar, $palabra, $array){
-    $error = 0;
+    $error = 'errorA';
+    $errorB = 'errorB';
+    $errorC = 'errorC';
     for($k = 0; $k < count($array); $k++){
+        if(is_numeric($palabra[$k])){
+            return $error;
+        }
+        if($palabra[$k] == ' '){
+            return $errorB;
+        }
         for($j = 0 ; $j < count($array); $j++){
             if($palabra[$k] == $array[$j]){
                 $sumar++;
@@ -66,8 +69,7 @@ function verificarLetras($sumar, $palabra, $array){
     }
 
     if($sumar > strlen($palabra)){
-        $error++;
-        return $error;
+        return $errorC;
     }
 }
 ?>
