@@ -35,7 +35,7 @@ echo "<h1> Los primeros 20 terminos de la sucesion fibonacci ordenados de manera
 
 function fibonacci($n) {
     if ($n < 0) {
-        return "Invalid input: Fibonacci is defined for non-negative numbers.";
+        return "Ingreso invalido, fibonacci no acepta numeros negativos.";
     } elseif ($n == 0) {
         return 0;
     } elseif ($n == 1) {
