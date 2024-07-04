@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 for($i = 0; $i < 20 ;$i++){
     if($i == 19){
         $terminos .= fibonacci($i);
@@ -44,7 +40,6 @@ function fibonacci($n) {
         return fibonacci($n - 1) + fibonacci($n - 2);
     }
 }
-
 ?>
 
 
