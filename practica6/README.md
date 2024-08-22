@@ -39,5 +39,6 @@ boleta tiene los siguientes datos (guardados en una tabla llamada Inscripción):
 - Mes del examen (2 dígitos)
 - Año del examen (4 dígitos)
 - Apellido y Nombre (25 caracteres)
-  Desarrollar un programa que permita agregar más inscripciones de alumnos a los
-  exámenes.
+
+Desarrollar un programa que permita agregar más inscripciones de alumnos a los
+exámenes.
