@@ -19,7 +19,6 @@ resultados($maxs, "mayores");
 resultados($mins, "menores");
 echo "<h1>El promedio de todos los numeros del array es de: $promedio</h1>";
 
-
 function calculos($array)
 {
     sort($array);

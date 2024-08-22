@@ -84,14 +84,14 @@ Escribir un programa en HTML que pida un número entero. A continuación, llamar
 programa PHP que por medio de funciones, muestre cuántos números hay entre 1 y n
 que sean primos. Un número primo es aquel que solo es divisible por 1 y por él mismo.
 Ejemplo: para n = 8:
-1  primo
-2  primo
-3  primo
-4  no primo
-5  primo
-6  no primo
-7  primo
-8  no primo
+1 -> primo
+2 -> primo
+3 -> primo
+4 -> no primo
+5 -> primo
+6 -> no primo
+7 -> primo
+8 -> no primo
 Resultando un total de 5 números primos
 
 # Ejercicio 268.
