@@ -1,8 +1,7 @@
 # Ejercicio 33.
 
 Hacer una clase php llamada Palindromo, que siga las siguientes condiciones:
-- Sus atributos son: palabra. No queremos que se acceda directamente a él.
-- Los métodos que se implementarán son:
+- Sus atributos son: palabra. No queremos que se acceda directamente a él. Los métodos que se implementarán son:
 
 - método constructor: recibe el valor del atributo. Por simplicidad, omitir la
 validación.
