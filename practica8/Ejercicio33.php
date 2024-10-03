@@ -32,9 +32,9 @@ class Palindromo
 		$palabraAlReves = $this->armarAlReves($palabra);
 		$esPalindromo = $this->validarPalindromo($palabra);
 
-		echo "La palabra ingresada es $palabra, la palabra al reves es $palabraAlReves y esta $esPalindromo";
+		return "La palabra ingresada es $palabra, la palabra al reves es $palabraAlReves y esta $esPalindromo";
 	}
 }
 
-$palindromo = new Palindromo('rEcOnocEr');
+$palindromo = new Palindromo('rEcONocEr');
 echo $palindromo->mostrarInformacion();
