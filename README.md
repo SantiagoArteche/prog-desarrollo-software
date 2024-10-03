@@ -1,4 +1,4 @@
-# Programación 1 - Técnicatura en Desarrollo de Software
+# Programación 1 - Tecnicatura en Desarrollo de Software
 
 ### PHP - MySQL
 
