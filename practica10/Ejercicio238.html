@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numeracion</title>
+  </head>
+  <body>
+    <h1>
+      Elige tu sistema de numeracion y convertimos tu numero a los demas
+      sistemas!
+    </h1>
+    <form action="Ejercicio238.php" method="post">
+      <input type="text" required name="numero" />
+      <select name="sistemaDeNumeracion" required>
+        <option value="DEC">Decimal</option>
+        <option value="BIN">Binario</option>
+        <option value="OCT">Octal</option>
+        <option value="HEX">Hexadecimal</option>
+      </select>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
